@@ -1,0 +1,2317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCL xmlns:ext="http://www.wri.com.cn" xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iec.ch/61850/2003/SCL" >
+    <Header id="TEMPLATE" version="1" revision="0" toolID="FHConfig" nameStructure="IEDName">
+        <History>
+            <Hitem version="1" revision="0" when="2008-03-13" who="YanDengxue" what="Create"/>
+        </History>
+    </Header>
+    <Communication>
+        <SubNetwork name="Subnet_MMS" type="8-MMS">
+            <BitRate unit="b/s" multiplier="M">10</BitRate>
+            <ConnectedAP iedName="TEMPLATE" apName="S1">
+                <Address>
+                    <P type="OSI-AP-Title">1 3 9999 33</P>
+                    <P type="OSI-AE-Qualifier">33</P>
+                    <P type="OSI-PSEL">00 00 00 01</P>
+                    <P type="OSI-SSEL">00 01</P>
+                    <P type="OSI-TSEL">00 01</P>
+                    <P type="IP">127.0.0.1</P>
+                </Address>
+            </ConnectedAP>
+        </SubNetwork>
+    </Communication>
+    <IED name="TEMPLATE" desc="合并单元" type="FH2004MU" manufacturer="烽火富华" configVersion="1.00">
+        <Services>
+            <DynAssociation/>
+            <SettingGroups>
+                <SGEdit/>
+                <ConfSG/>
+            </SettingGroups>
+            <GetDirectory/>
+            <GetDataObjectDefinition/>
+            <DataObjectDirectory/>
+            <GetDataSetValue/>
+            <SetDataSetValue/>
+            <DataSetDirectory/>
+            <ConfDataSet max="16" maxAttributes="128"/>
+            <ReadWrite/>
+            <ConfReportControl max="16"/>
+            <GetCBValues/>
+            <ReportSettings cbName="Conf" datSet="Dyn" rptID="Dyn" optFields="Dyn" bufTime="Fix" trgOps="Dyn" intgPd="Dyn"/>
+            <GOOSE max="64"/>
+            <FileHandling/>
+            <ConfLNs fixPrefix="true" fixLnInst="true"/>
+        </Services>
+        <AccessPoint name="G1" desc="G1" router="false" clock="false">
+            <Server>
+                <Authentication none="true"/>
+                <LDevice inst="SVLD">
+                    <LN0 lnClass="LLN0" lnType="FH_LLN0" inst="">
+                        <DataSet name="dSSV"  desc="SV数据集">
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="1"  doName="Ana1" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="1"  doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="2"  doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="3"  doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="4"  doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="5"  doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="6"  doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="7"  doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="8"  doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="9"  doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="10" doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="11" doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="12" doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="13" doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TCTR" lnInst="14" doName="Amp" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TVTR" lnInst="1"  doName="Vol" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TVTR" lnInst="2"  doName="Vol" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TVTR" lnInst="3"  doName="Vol" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TVTR" lnInst="4"  doName="Vol" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TVTR" lnInst="5"  doName="Vol" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TVTR" lnInst="6"  doName="Vol" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TVTR" lnInst="7"  doName="Vol" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TVTR" lnInst="8"  doName="Vol" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TVTR" lnInst="9"  doName="Vol" fc="MX"/>
+                            <FCDA ldInst="SVLD" lnClass="TVTR" lnInst="10" doName="Vol" fc="MX"/>
+                        </DataSet>
+                        <DataSet name="dSGOOSE"  desc="GOOSE数据集">
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="2"   doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="2"   doName="Alm2" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="2"   doName="Alm3" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="2"   doName="Alm4" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="2"   doName="Alm5" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="2"   doName="Alm6" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="2"   doName="Alm7" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="2"   doName="Alm8" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="3"   doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="3"   doName="Alm2" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="4"   doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="4"   doName="Alm2" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="4"   doName="Alm3" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="4"   doName="Alm4" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="5"   doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="6"   doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="7"   doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="8"   doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="9"   doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="10"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="11"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="12"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="13"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="14"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="15"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="16"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="17"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="18"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="19"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="20"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="21"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="22"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="23"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="24"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="25"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="26"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="27"  doName="Alm1" fc="ST"/>
+                            <FCDA ldInst="SVLD" lnClass="GGIO" lnInst="28"  doName="Alm1" fc="ST"/>
+                        </DataSet>
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="NamPlt">
+                            <DAI name="configRev">
+                                <Val>1.00</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="FuncEna1">
+                            <DAI name="ctlModel">
+                                <Val>4</Val>
+                            </DAI>
+                            <DAI name="sboTimeout">
+                                <Val>30000</Val>
+                            </DAI>
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="FuncEna2">
+                            <DAI name="ctlModel">
+                                <Val>4</Val>
+                            </DAI>
+                            <DAI name="sboTimeout">
+                                <Val>30000</Val>
+                            </DAI>
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="FuncEna3">
+                            <DAI name="ctlModel">
+                                <Val>4</Val>
+                            </DAI>
+                            <DAI name="sboTimeout">
+                                <Val>30000</Val>
+                            </DAI>
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="FuncEna4">
+                            <DAI name="ctlModel">
+                                <Val>4</Val>
+                            </DAI>
+                            <DAI name="sboTimeout">
+                                <Val>30000</Val>
+                            </DAI>
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="FuncEna5">
+                            <DAI name="ctlModel">
+                                <Val>4</Val>
+                            </DAI>
+                            <DAI name="sboTimeout">
+                                <Val>30000</Val>
+                            </DAI>
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="FuncEna6">
+                            <DAI name="ctlModel">
+                                <Val>4</Val>
+                            </DAI>
+                            <DAI name="sboTimeout">
+                                <Val>30000</Val>
+                            </DAI>
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="FuncEna7">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="FuncEna8">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="FuncEna9">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="FuncEna10">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="DPFCStr">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ROCStr">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="N0CStr">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="LinNo">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="RemSetEna">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="RemGoEna">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN0>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="1" desc="保护电流1A相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="保护电流1A相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>保护电流1A相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="2" desc="保护电流1B相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="保护电流1B相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>保护电流1B相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="3" desc="保护电流1C相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="保护电流1C相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>保护电流1C相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="4" desc="保护电流2A相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="保护电流2A相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>保护电流2A相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="5" desc="保护电流2B相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="保护电流2B相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>保护电流2B相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="6" desc="保护电流2C相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="保护电流2C相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>保护电流2C相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="7" desc="零序电流1">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="零序电流1">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>零序电流1</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="8" desc="零序电流2">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="零序电流2">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>零序电流2</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="9" desc="测量电流1A相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="测量电流1A相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>测量电流1A相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="10" desc="测量电流1B相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="测量电流1B相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>测量电流1B相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="11" desc="测量电流1C相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="测量电流1C相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>测量电流1C相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="12" desc="测量电流2A相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="测量电流2A相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>测量电流2A相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="13" desc="测量电流2B相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="测量电流2B相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>测量电流2B相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TCTR" lnClass="TCTR" inst="14" desc="测量电流2C相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Amp" desc="测量电流2C相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>测量电流2C相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ARtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="ECVTDelay">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TVTR" lnClass="TVTR" inst="1" desc="电压1A相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Vol" desc="电压1A相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>电压1A相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="LinTVMod">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TVTR" lnClass="TVTR" inst="2" desc="电压1B相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Vol" desc="电压1B相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>电压1B相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="LinTVMod">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TVTR" lnClass="TVTR" inst="3" desc="电压1C相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Vol" desc="电压1C相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>电压1C相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="LinTVMod">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TVTR" lnClass="TVTR" inst="4" desc="电压2A相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Vol" desc="电压2A相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>电压2A相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="LinTVMod">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TVTR" lnClass="TVTR" inst="5" desc="电压2B相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Vol" desc="电压2B相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>电压2B相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="LinTVMod">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TVTR" lnClass="TVTR" inst="6" desc="电压2C相">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Vol" desc="电压2C相">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>电压2C相</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="LinTVMod">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TVTR" lnClass="TVTR" inst="7" desc="中性点电压1">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Vol" desc="中性点电压1">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>中性点电压1</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="LinTVMod">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TVTR" lnClass="TVTR" inst="8" desc="母线电压1">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Vol" desc="母线电压1">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>母线电压1</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="LinTVMod">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TVTR" lnClass="TVTR" inst="9" desc="中性点电压2">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Vol" desc="中性点电压2">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>中性点电压2</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="LinTVMod">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN lnType="FH_TVTR" lnClass="TVTR" inst="10" desc="母线电压2">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="HzRtg">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="VRtgSnd">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Vol" desc="母线电压2">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30"/>
+                            </SDI>
+                            <DAI name="dU">
+                                <Val>母线电压2</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="LinTVMod">
+                            <DAI name="dataNs">
+                                <Val>            ZPEPC MODEL:2008                                  </Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="固定延时" lnType="FH_GGIO_ANA" lnClass="GGIO" inst="1">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Ana1" desc="固定延时">
+                            <SDI name="instMag">
+                                <DAI name="i" sAddr="INT32:0x30" />
+                            </SDI>
+                            <SDI name="units">
+                                <DAI name="SIUnit" valKind="RO">
+                                    <Val>4</Val>
+                                </DAI>
+                                <DAI name="multiplier" valKind="RO">
+                                    <Val>-6</Val>
+                                </DAI>
+                            </SDI>
+                            <DAI name="dU" valKind="RO">
+                                <Val>固定延时</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="光供能状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="2">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="装置状态信息">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>装置状态信息</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm2" desc="激光器板开关泵总状态">
+                            <DAI name="stVal" sAddr="BOOLEAN:2" />
+                            <DAI name="dU">
+                                <Val>激光器板开关泵总状态</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm3" desc="激光器板A开关泵状态">
+                            <DAI name="stVal" sAddr="BOOLEAN:32" />
+                            <DAI name="dU">
+                                <Val>激光器板A开关泵状态</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm4" desc="激光器板A告警状态">
+                            <DAI name="stVal" sAddr="BOOLEAN:33" />
+                            <DAI name="dU">
+                                <Val>激光器板A告警状态</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm5" desc="激光器板B开关泵状态">
+                            <DAI name="stVal" sAddr="BOOLEAN:34" />
+                            <DAI name="dU">
+                                <Val>激光器板B开关泵状态</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm6" desc="激光器板B告警状态">
+                            <DAI name="stVal" sAddr="BOOLEAN:35" />
+                            <DAI name="dU">
+                                <Val>激光器板B告警状态</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm7" desc="激光器板C开关泵状态">
+                            <DAI name="stVal" sAddr="BOOLEAN:36" />
+                            <DAI name="dU">
+                                <Val>激光器板C开关泵状态</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm8" desc="激光器板C告警状态">
+                            <DAI name="stVal" sAddr="BOOLEAN:37" />
+                            <DAI name="dU">
+                                <Val>激光器板C告警状态</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="光供能控制状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="3">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通讯中断">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通讯中断</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm2" desc="激光器板控制失败">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>激光器板控制失败</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="合并单元装置状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="4">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="装置检修">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>装置检修</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm2" desc="外部输入同步有效标识">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>外部输入同步有效标识</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm3" desc="装置同步有效标识">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>装置同步有效标识</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm4" desc="装置守时有效标识">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>装置守时有效标识</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="保护电流1A相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="5">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:30" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="保护电流1B相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="6">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="保护电流1C相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="7">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="保护电流2A相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="8">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="保护电流2B相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="9">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="保护电流2C相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="10">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="零序电流1通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="11">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="零序电流2通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="12">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="测量电流1A相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="13">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="测量电流1B相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="14">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="测量电流1C相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="15">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="测量电流2A相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="16">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="测量电流2B相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="17">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="测量电流2C相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="18">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="电压1A相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="19">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="电压1B相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="20">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="电压1C相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="21">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="电压2A相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="22">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="电压2B相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="23">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="电压2C相通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="24">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="中性点电压1通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="25">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="母线电压1通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="26">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="中性点电压2通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="27">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                    <LN desc="母线电压2通道状态" lnType="FH_GGIO_ALM" lnClass="GGIO" inst="28">
+                        <DOI name="Mod">
+                            <DAI name="ctlModel">
+                                <Val>0</Val>
+                            </DAI>
+                        </DOI>
+                        <DOI name="Alm1" desc="通道告警">
+                            <DAI name="stVal" sAddr="BOOLEAN:1" />
+                            <DAI name="dU">
+                                <Val>通道告警</Val>
+                            </DAI>
+                        </DOI>
+                    </LN>
+                </LDevice>
+            </Server>
+        </AccessPoint>
+    </IED>
+    <DataTypeTemplates>
+        <LNodeType id="FH_LLN0" desc="LLN0" lnClass="LLN0">
+            <DO name="Mod" type="CN_INC_Mod" desc="Mode"/>
+            <DO name="Beh" type="CN_INS_Beh" desc="Behaviour"/>
+            <DO name="Health" type="CN_INS_Health" desc="Health"/>
+            <DO name="NamPlt" type="CN_LPL_LN0" desc="Name Plate"/>
+            <DO name="Loc" type="CN_SPS" desc="Local operation"/>
+            <DO name="LEDRs" type="CN_SPC_DC" desc="LED reset "/>
+            <DO name="FuncEna1" type="CN_SPC_EX" desc="功能软压板1"/>
+            <DO name="FuncEna2" type="CN_SPC_EX" desc="功能软压板2"/>
+            <DO name="FuncEna3" type="CN_SPC_EX" desc="功能软压板3"/>
+            <DO name="FuncEna4" type="CN_SPC_EX" desc="功能软压板4"/>
+            <DO name="FuncEna5" type="CN_SPC_EX" desc="功能软压板5"/>
+            <DO name="FuncEna6" type="CN_SPC_EX" desc="功能软压板6"/>
+            <DO name="FuncEna7" type="CN_SPC_EX" desc="功能软压板7"/>
+            <DO name="FuncEna8" type="CN_SPC_EX" desc="功能软压板8"/>
+            <DO name="FuncEna9" type="CN_SPC_EX" desc="功能软压板9"/>
+            <DO name="FuncEna10" type="CN_SPC_EX" desc="功能软压板10"/>
+            <DO name="DPFCStr" type="CN_ASG_SG_EX" desc="电流变化量起动值"/>
+            <DO name="ROCStr" type="CN_ASG_SG_EX" desc="零序起动电流"/>
+            <DO name="N0CStr" type="CN_ASG_SG_EX" desc="负序起动电流"/>
+            <DO name="LinNo" type="CN_ING_SG_EX" desc="线路编号"/>
+            <DO name="RemSetEna" type="CN_SPS_EX" desc="远方修改定值"/>
+            <DO name="RemGoEna" type="CN_SPS_EX" desc="远方控制GOOSE"/>
+        </LNodeType>
+        <LNodeType id="FH_TCTR" lnClass="TCTR">
+            <DO name="Mod" type="CN_INC_Mod" desc="Mode"/>
+            <DO name="Beh" type="CN_INS_Beh" desc="Behaviour"/>
+            <DO name="Health" type="CN_INS_Health" desc="Health"/>
+            <DO name="NamPlt" type="CN_LPL_LN0" desc="Name Plate"/>
+            <DO name="EEHealth" type="CN_INS_Health" desc="External equipment health "/>
+            <DO name="EEName" type="CN_DPL" desc="External equipment name plate "/>
+            <DO name="OpTmh" type="CN_INS" desc="Operation time "/>
+            <DO name="Amp" type="CN_SAV" desc="Current (Sampled value) "/>
+            <DO name="ARtg" type="CN_ASG_SP_EX" desc="Rated Current"/>
+            <DO name="HzRtg" type="CN_ASG_SP_EX" desc="Rated Frequency"/>
+            <DO name="ARtgSnd" type="CN_ASG_SP_EX" desc="Secondary Rated Current"/>
+            <DO name="ECVTDelay" type="CN_ASG_SG_EX" desc="ECVT Delay time"/>
+        </LNodeType>
+        <LNodeType id="FH_GGIO_ANA" lnClass="GGIO">
+            <DO name="Mod" type="CN_INC_Mod" />
+            <DO name="Beh" type="CN_INS_Beh" />
+            <DO name="Health" type="CN_INS_Health" />
+            <DO name="NamPlt" type="CN_LPL" />
+            <DO name="Ana1" type="CN_SAV" />
+            <DO name="Ana2" type="CN_SAV" />
+            <DO name="Ana3" type="CN_SAV" />
+            <DO name="Ana4" type="CN_SAV" />
+            <DO name="Ana5" type="CN_SAV" />
+            <DO name="Ana6" type="CN_SAV" />
+            <DO name="Ana7" type="CN_SAV" />
+            <DO name="Ana8" type="CN_SAV" />
+        </LNodeType>
+        <LNodeType id="FH_TVTR" lnClass="TVTR">
+            <DO name="Mod" type="CN_INC_Mod" desc="Mode"/>
+            <DO name="Beh" type="CN_INS_Beh" desc="Behaviour"/>
+            <DO name="Health" type="CN_INS_Health" desc="Health"/>
+            <DO name="NamPlt" type="CN_LPL_LN0" desc="Name Plate"/>
+            <DO name="EEHealth" type="CN_INS_Health" desc="External equipment health "/>
+            <DO name="EEName" type="CN_DPL" desc="External equipment name plate "/>
+            <DO name="OpTmh" type="CN_INS" desc="Operation time "/>
+            <DO name="Vol" type="CN_SAV" desc="Voltage (sampled value) "/>
+            <DO name="FuFail" type="CN_SPS" desc="TVTR fuse failure "/>
+            <DO name="VRtg" type="CN_ASG_SP_EX" desc="Rated Voltage"/>
+            <DO name="HzRtg" type="CN_ASG_SP_EX" desc="Rated frequency"/>
+            <DO name="VRtgSnd" type="CN_ASG_SP_EX" desc="Secondary Rated Voltage"/>
+            <DO name="LinTVMod" type="CN_SPG_SG_EX" desc="Line TV MODE"/>
+        </LNodeType>
+        <LNodeType id="FH_GGIO_ALM" lnClass="GGIO">
+            <DO name="Mod" type="CN_INC_Mod" desc="Mode" />
+            <DO name="Beh" type="CN_INS_Beh" desc="Behaviour" />
+            <DO name="Health" type="CN_INS_Health" desc="Health" />
+            <DO name="NamPlt" type="CN_LPL_LN0" desc="Name Plate" />
+            <DO name="Alm1" type="CN_SPS" desc="General indication (binary input) " />
+            <DO name="Alm2" type="CN_SPS" desc="General indication (binary input) " />
+            <DO name="Alm3" type="CN_SPS" desc="General indication (binary input) " />
+            <DO name="Alm4" type="CN_SPS" desc="General indication (binary input) " />
+            <DO name="Alm5" type="CN_SPS" desc="General indication (binary input) " />
+            <DO name="Alm6" type="CN_SPS" desc="General indication (binary input) " />
+            <DO name="Alm7" type="CN_SPS" desc="General indication (binary input) " />
+            <DO name="Alm8" type="CN_SPS" desc="General indication (binary input) " />
+        </LNodeType>
+        <DOType id="CN_SPS" cdc="SPS">
+            <DA name="stVal" bType="BOOLEAN" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="BOOLEAN" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_INS_Beh" cdc="INS">
+            <DA name="stVal" bType="Enum" type="Beh" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+        </DOType>
+        <DOType id="CN_INS_Health" cdc="INS">
+            <DA name="stVal" bType="Enum" type="Health" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+        </DOType>
+        <DOType id="CN_INS_CBOpCap" cdc="INS">
+            <DA name="stVal" bType="Enum" type="CBOpCap" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="Enum" type="CBOpCap" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_INS_SwTyp" cdc="INS">
+            <DA name="stVal" bType="Enum" type="SwTyp" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="Enum" type="SwTyp" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_INS_SwOpCap" cdc="INS">
+            <DA name="stVal" bType="Enum" type="SwOpCap" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="Enum" type="SwOpCap" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_CMV" cdc="CMV">
+            <DA name="cVal" bType="Struct" type="CN_Vector" dchg="true" fc="MX"/>
+            <DA name="q" bType="Quality" qchg="true" fc="MX"/>
+            <DA name="t" bType="Timestamp" fc="MX"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subCVal" bType="Struct" type="CN_Vector" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+            <DA name="db" bType="INT32U" fc="CF"/>
+            <DA name="zeroDb" bType="INT32U" fc="CF"/>
+            <DA name="rangeC" bType="Struct" type="CN_RangeConfig" fc="CF"/>
+            <DA name="magSVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+            <DA name="angSVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+            <DA name="angRef" bType="Enum" type="angidCMV" fc="CF"/>
+            <DA name="smpRate" bType="INT32U" fc="CF"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_DEL" cdc="DEL">
+            <SDO name="phsAB" type="CN_CMV"/>
+            <SDO name="phsBC" type="CN_CMV"/>
+            <SDO name="phsCA" type="CN_CMV"/>
+            <DA name="angRef" bType="Enum" type="angid" fc="CF"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_SPC_DC" cdc="SPC">
+            <DA name="Oper" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+            <DA name="stVal" bType="BOOLEAN" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="BOOLEAN" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="pulseConfig" bType="Struct" type="CN_PulseConfig" fc="CF"/>
+            <DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_INC" cdc="INC">
+            <DA name="SBOw" bType="Struct" type="CN_SBOw_Oper_INC" fc="CO"/>
+            <DA name="Oper" bType="Struct" type="CN_SBOw_Oper_INC" fc="CO"/>
+            <DA name="Cancel" bType="Struct" type="CN_Cancel_INC" fc="CO"/>
+            <DA name="stVal" bType="INT32" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="INT32" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+            <DA name="sboTimeout" bType="INT32U" fc="CF"/>
+            <DA name="sboClass" bType="Enum" type="sboClass" fc="CF"/>
+            <DA name="minVal" bType="INT32" fc="CF"/>
+            <DA name="maxVal" bType="INT32" fc="CF"/>
+            <DA name="stepSize" bType="INT32U" fc="CF"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_INC_Mod" cdc="INC">
+            <DA name="stVal" bType="Enum" type="Mod" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF">
+                <Val>0</Val>
+            </DA>
+        </DOType>
+        <DOType id="CN_BSC" cdc="BSC">
+            <DA name="SBOw" bType="Struct" type="CN_SBOw_Oper_BSC" fc="CO"/>
+            <DA name="Oper" bType="Struct" type="CN_SBOw_Oper_BSC" fc="CO"/>
+            <DA name="Cancel" bType="Struct" type="CN_Cancel_BSC" fc="CO"/>
+            <DA name="valWTr" bType="Struct" type="CN_ValWithTrans" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="Struct" type="CN_ValWithTrans" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="persistent" bType="BOOLEAN" fc="CF"/>
+            <DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+            <DA name="sboTimeout" bType="INT32U" fc="CF"/>
+            <DA name="sboClass" bType="Enum" type="sboClass" fc="CF"/>
+            <DA name="minVal" bType="INT8" fc="CF"/>
+            <DA name="maxVal" bType="INT8" fc="CF"/>
+            <DA name="stepSize" bType="INT8U" fc="CF"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_SPG_SG" cdc="SPG">
+            <DA name="setVal" bType="BOOLEAN" fc="SG"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_SPG_SP" cdc="SPG">
+            <DA name="setVal" bType="BOOLEAN" fc="SP"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_ING_SP" cdc="ING">
+            <DA name="setVal" bType="INT32" fc="SP"/>
+            <DA name="minVal" bType="INT32" fc="CF"/>
+            <DA name="maxVal" bType="INT32" fc="CF"/>
+            <DA name="stepSize" bType="INT32U" fc="CF"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_ASG_SP" cdc="ASG">
+            <DA name="setMag" bType="Struct" type="CN_AnalogueValue" fc="SP"/>
+            <DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+            <DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+            <DA name="minVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+            <DA name="maxVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+            <DA name="stepSize" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_STG_SG" cdc="STG">
+            <DA name="setVal" bType="Unicode255" fc="SG"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="cdcNs" bType="VisString255" fc="EX"/>
+            <DA name="cdcName" bType="VisString255" fc="EX"/>
+        </DOType>
+        <DOType id="CN_STG_SP" cdc="STG">
+            <DA name="setVal" bType="Unicode255" fc="SP"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="cdcNs" bType="VisString255" fc="EX"/>
+            <DA name="cdcName" bType="VisString255" fc="EX"/>
+        </DOType>
+        <DOType id="CN_LPL_LN0" cdc="LPL">
+            <DA name="vendor" bType="VisString255" fc="DC"/>
+            <DA name="swRev" bType="VisString255" fc="DC"/>
+            <DA name="d" bType="VisString255" fc="DC"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="configRev" bType="VisString255" fc="DC"/>
+            <DA name="ldNs" bType="VisString255" fc="EX">
+                <Val>IEC 61850-7-4:2003</Val>
+            </DA>
+        </DOType>
+        <DOType id="CN_LPL" cdc="LPL">
+            <DA name="vendor" bType="VisString255" fc="DC"/>
+            <DA name="swRev" bType="VisString255" fc="DC"/>
+            <DA name="d" bType="VisString255" fc="DC"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_ASG_SG_EX" cdc="ASG">
+            <DA name="setMag" bType="Struct" type="CN_AnalogueValue" fc="SG"/>
+            <DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+            <DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+            <DA name="minVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+            <DA name="maxVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+            <DA name="stepSize" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="dataNs" bType="VisString255" fc="EX">
+                <Val>            ZPEPC MODEL:2008                                  </Val>
+            </DA>
+        </DOType>
+        <DOType id="CN_ING_SG_EX" cdc="ING">
+            <DA name="setVal" bType="INT32" fc="SG"/>
+            <DA name="minVal" bType="INT32" fc="CF"/>
+            <DA name="maxVal" bType="INT32" fc="CF"/>
+            <DA name="stepSize" bType="INT32U" fc="CF"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="dataNs" bType="VisString255" fc="EX">
+                <Val>            ZPEPC MODEL:2008                                  </Val>
+            </DA>
+        </DOType>
+        <DOType id="CN_SPS_EX" cdc="SPS">
+            <DA name="stVal" bType="BOOLEAN" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="BOOLEAN" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="dataNs" bType="VisString255" fc="EX">
+                <Val>            ZPEPC MODEL:2008                                  </Val>
+            </DA>
+        </DOType>
+        <DOType id="CN_SPC_EX" cdc="SPC">
+            <DA name="SBOw" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+            <DA name="Oper" bType="Struct" type="CN_SBOw_Oper_SDPC" fc="CO"/>
+            <DA name="Cancel" bType="Struct" type="CN_Cancel_SDPC" fc="CO"/>
+            <DA name="stVal" bType="BOOLEAN" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="BOOLEAN" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="pulseConfig" bType="Struct" type="CN_PulseConfig" fc="CF"/>
+            <DA name="ctlModel" bType="Enum" type="ctlModel" fc="CF"/>
+            <DA name="sboTimeout" bType="INT32U" fc="CF"/>
+            <DA name="sboClass" bType="Enum" type="sboClass" fc="CF"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="dataNs" bType="VisString255" fc="EX">
+                <Val>            ZPEPC MODEL:2008                                  </Val>
+            </DA>
+        </DOType>
+        <DOType id="CN_ACT_EX" cdc="ACT">
+            <DA name="general" bType="BOOLEAN" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="dataNs" bType="VisString255" fc="EX">
+                <Val>            ZPEPC MODEL:2008                                  </Val>
+            </DA>
+        </DOType>
+        <DOType id="FH_INC_Mod" cdc="INC">
+            <DA name="stVal" bType="Enum" type="FH_Mod" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="stSeld" bType="BOOLEAN" dchg="true" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="Enum" type="FH_Mod" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="ctlModel" bType="Enum" type="FH_ctlModel" fc="CF"/>
+            <DA name="sboTimeout" bType="INT32U" fc="CF"/>
+            <DA name="sboClass" bType="Enum" type="FH_sboClass" fc="CF"/>
+            <DA name="d" bType="VisString255" fc="DC"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="SBOw" bType="Struct" type="FH_SBOw_Mod" fc="CO"/>
+            <DA name="Oper" bType="Struct" type="FH_Oper_Mod" fc="CO"/>
+            <DA name="Cancel" bType="Struct" type="FH_Cancel_Mod" fc="CO"/>
+            <DA name="dataNs" bType="VisString255" fc="EX"/>
+        </DOType>
+        <DOType id="FH_INS_Beh" cdc="INS">
+            <DA name="stVal" bType="Enum" type="FH_Beh" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="Enum" type="FH_Beh" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="d" bType="VisString255" fc="DC"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="dataNs" bType="VisString255" fc="EX"/>
+        </DOType>
+        <DOType id="FH_INS_Health" cdc="INS">
+            <DA name="stVal" bType="Enum" type="FH_Health" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="Enum" type="FH_Health" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="d" bType="VisString255" fc="DC"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="dataNs" bType="VisString255" fc="EX"/>
+        </DOType>
+        <DOType id="FH_LPL" cdc="LPL">
+            <DA name="vendor" bType="VisString255" fc="DC"/>
+            <DA name="swRev" bType="VisString255" fc="DC"/>
+            <DA name="d" bType="VisString255" fc="DC"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="configRev" bType="VisString255" fc="DC"/>
+            <DA name="ldNs" bType="VisString255" fc="EX"/>
+            <DA name="lnNs" bType="VisString255" fc="EX"/>
+            <DA name="dataNs" bType="VisString255" fc="EX"/>
+        </DOType>
+        <DOType id="FH_SPS" cdc="SPS">
+            <DA name="stVal" bType="BOOLEAN" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="BOOLEAN" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="d" bType="VisString255" fc="DC"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="dataNs" bType="VisString255" fc="EX"/>
+        </DOType>
+        <DOType id="CN_DPL" cdc="DPL">
+            <DA name="vendor" bType="VisString255" fc="DC"/>
+            <DA name="hwRev" bType="VisString255" fc="DC"/>
+            <DA name="swRev" bType="VisString255" fc="DC"/>
+            <DA name="serNum" bType="VisString255" fc="DC"/>
+            <DA name="model" bType="VisString255" fc="DC"/>
+            <DA name="location" bType="VisString255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_INS" cdc="INS">
+            <DA name="stVal" bType="INT32" dchg="true" fc="ST"/>
+            <DA name="q" bType="Quality" qchg="true" fc="ST"/>
+            <DA name="t" bType="Timestamp" fc="ST"/>
+            <DA name="subEna" bType="BOOLEAN" fc="SV"/>
+            <DA name="subVal" bType="INT32" fc="SV"/>
+            <DA name="subQ" bType="Quality" fc="SV"/>
+            <DA name="subID" bType="VisString64" fc="SV"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_SAV" cdc="SAV">
+            <DA name="instMag" bType="Struct" type="CN_AnalogueValue_I" fc="MX"/>
+            <DA name="q" bType="Quality" qchg="true" fc="MX"/>
+            <DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+            <DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+            <DA name="min" bType="Struct" type="CN_AnalogueValue_I" fc="CF"/>
+            <DA name="max" bType="Struct" type="CN_AnalogueValue_I" fc="CF"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+        </DOType>
+        <DOType id="CN_ASG_SP_EX" cdc="ASG">
+            <DA name="setMag" bType="Struct" type="CN_AnalogueValue" fc="SP"/>
+            <DA name="units" bType="Struct" type="CN_units" fc="CF"/>
+            <DA name="sVC" bType="Struct" type="CN_ScaledValueConfig" fc="CF"/>
+            <DA name="minVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+            <DA name="maxVal" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+            <DA name="stepSize" bType="Struct" type="CN_AnalogueValue" fc="CF"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="dataNs" bType="VisString255" fc="EX">
+                <Val>            ZPEPC MODEL:2008                                  </Val>
+            </DA>
+        </DOType>
+        <DOType id="CN_SPG_SG_EX" cdc="SPG">
+            <DA name="setVal" bType="BOOLEAN" fc="SG"/>
+            <DA name="dU" bType="Unicode255" fc="DC"/>
+            <DA name="dataNs" bType="VisString255" fc="EX">
+                <Val>            ZPEPC MODEL:2008                                  </Val>
+            </DA>
+        </DOType>
+        <DAType id="CN_AnalogueValue">
+            <BDA name="f" bType="FLOAT32"/>
+        </DAType>
+        <DAType id="CN_RangeConfig">
+            <BDA name="hhLim" bType="Struct" type="CN_AnalogueValue"/>
+            <BDA name="hLim" bType="Struct" type="CN_AnalogueValue"/>
+            <BDA name="lLim" bType="Struct" type="CN_AnalogueValue"/>
+            <BDA name="llLim" bType="Struct" type="CN_AnalogueValue"/>
+            <BDA name="min" bType="Struct" type="CN_AnalogueValue"/>
+            <BDA name="max" bType="Struct" type="CN_AnalogueValue"/>
+        </DAType>
+        <DAType id="CN_Vector">
+            <BDA name="mag" bType="Struct" type="CN_AnalogueValue"/>
+            <BDA name="ang" bType="Struct" type="CN_AnalogueValue"/>
+        </DAType>
+        <DAType id="CN_SBOw_Oper_SDPC">
+            <BDA name="ctlVal" bType="BOOLEAN"/>
+            <BDA name="origin" bType="Struct" type="CN_Originator"/>
+            <BDA name="ctlNum" bType="INT8U"/>
+            <BDA name="T" bType="Timestamp"/>
+            <BDA name="Test" bType="BOOLEAN"/>
+            <BDA name="Check" bType="Check"/>
+        </DAType>
+        <DAType id="CN_Cancel_SDPC">
+            <BDA name="ctlVal" bType="BOOLEAN"/>
+            <BDA name="origin" bType="Struct" type="CN_Originator"/>
+            <BDA name="ctlNum" bType="INT8U"/>
+            <BDA name="T" bType="Timestamp"/>
+            <BDA name="Test" bType="BOOLEAN"/>
+        </DAType>
+        <DAType id="CN_SBOw_Oper_INC">
+            <BDA name="ctlVal" bType="INT32"/>
+            <BDA name="origin" bType="Struct" type="CN_Originator"/>
+            <BDA name="ctlNum" bType="INT8U"/>
+            <BDA name="T" bType="Timestamp"/>
+            <BDA name="Test" bType="BOOLEAN"/>
+            <BDA name="Check" bType="Check"/>
+        </DAType>
+        <DAType id="CN_Cancel_INC">
+            <BDA name="ctlVal" bType="INT32"/>
+            <BDA name="origin" bType="Struct" type="CN_Originator"/>
+            <BDA name="ctlNum" bType="INT8U"/>
+            <BDA name="T" bType="Timestamp"/>
+            <BDA name="Test" bType="BOOLEAN"/>
+        </DAType>
+        <DAType id="CN_SBOw_Oper_Mod">
+            <BDA name="ctlVal" bType="Enum" type="Mod"/>
+            <BDA name="origin" bType="Struct" type="CN_Originator"/>
+            <BDA name="ctlNum" bType="INT8U"/>
+            <BDA name="T" bType="Timestamp"/>
+            <BDA name="Test" bType="BOOLEAN"/>
+            <BDA name="Check" bType="Check"/>
+        </DAType>
+        <DAType id="CN_Cancel_Mod">
+            <BDA name="ctlVal" bType="Enum" type="Mod"/>
+            <BDA name="origin" bType="Struct" type="CN_Originator"/>
+            <BDA name="ctlNum" bType="INT8U"/>
+            <BDA name="T" bType="Timestamp"/>
+            <BDA name="Test" bType="BOOLEAN"/>
+        </DAType>
+        <DAType id="CN_SBOw_Oper_BSC">
+            <BDA name="ctlVal" bType="Tcmd"/>
+            <BDA name="origin" bType="Struct" type="CN_Originator"/>
+            <BDA name="ctlNum" bType="INT8U"/>
+            <BDA name="T" bType="Timestamp"/>
+            <BDA name="Test" bType="BOOLEAN"/>
+            <BDA name="Check" bType="Check"/>
+        </DAType>
+        <DAType id="CN_Cancel_BSC">
+            <BDA name="ctlVal" bType="Tcmd"/>
+            <BDA name="origin" bType="Struct" type="CN_Originator"/>
+            <BDA name="ctlNum" bType="INT8U"/>
+            <BDA name="T" bType="Timestamp"/>
+            <BDA name="Test" bType="BOOLEAN"/>
+        </DAType>
+        <DAType id="CN_Originator">
+            <BDA name="orCat" bType="Enum" type="orCategory"/>
+            <BDA name="orIdent" bType="Octet64"/>
+        </DAType>
+        <DAType id="CN_ValWithTrans">
+            <BDA name="posVal" bType="INT8"/>
+        </DAType>
+        <DAType id="CN_ScaledValueConfig">
+            <BDA name="scaleFactor" bType="FLOAT32"/>
+            <BDA name="offset" bType="FLOAT32"/>
+        </DAType>
+        <DAType id="CN_PulseConfig">
+            <BDA name="cmdQual" bType="Enum" type="PulseConfigCmdQual"/>
+            <BDA name="onDur" bType="INT32U"/>
+            <BDA name="offDur" bType="INT32U"/>
+            <BDA name="numPls" bType="INT32U"/>
+        </DAType>
+        <DAType id="CN_units">
+            <BDA name="SIUnit" bType="Enum" type="SIUnit"/>
+            <BDA name="multiplier" bType="Enum" type="multiplier"/>
+        </DAType>
+        <DAType id="FH_Originator">
+            <BDA name="orCat" bType="Enum" type="FH_orCategory"/>
+            <BDA name="orIdent" bType="Octet64"/>
+        </DAType>
+        <DAType id="FH_SBOw_Mod">
+            <BDA name="ctlVal" bType="Enum" type="FH_Mod"/>
+            <BDA name="origin" bType="Struct" type="FH_Originator"/>
+            <BDA name="ctlNum" bType="INT8U"/>
+            <BDA name="T" bType="Timestamp"/>
+            <BDA name="Test" bType="BOOLEAN"/>
+            <BDA name="Check" bType="Check"/>
+        </DAType>
+        <DAType id="FH_Oper_Mod">
+            <BDA name="ctlVal" bType="Enum" type="FH_Mod"/>
+            <BDA name="origin" bType="Struct" type="FH_Originator"/>
+            <BDA name="ctlNum" bType="INT8U"/>
+            <BDA name="T" bType="Timestamp"/>
+            <BDA name="Test" bType="BOOLEAN"/>
+            <BDA name="Check" bType="Check"/>
+        </DAType>
+        <DAType id="FH_Cancel_Mod">
+            <BDA name="ctlVal" bType="Enum" type="FH_Mod"/>
+            <BDA name="origin" bType="Struct" type="FH_Originator"/>
+            <BDA name="ctlNum" bType="INT8U"/>
+            <BDA name="T" bType="Timestamp"/>
+            <BDA name="Test" bType="BOOLEAN"/>
+        </DAType>
+        <DAType id="CN_AnalogueValue_I">
+            <BDA name="i" bType="INT32"/>
+        </DAType>
+        <EnumType id="PulseConfigCmdQual">
+            <EnumVal ord="0">pulse</EnumVal>
+            <EnumVal ord="1">persistent</EnumVal>
+        </EnumType>
+        <EnumType id="ctlModel">
+            <EnumVal ord="0">status-only</EnumVal>
+            <EnumVal ord="1">direct-with-normal-security</EnumVal>
+            <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+            <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+            <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+        </EnumType>
+        <EnumType id="sboClass">
+            <EnumVal ord="0">operate-once</EnumVal>
+            <EnumVal ord="1">operate-many</EnumVal>
+        </EnumType>
+        <EnumType id="orCategory">
+            <EnumVal ord="0">not-supported</EnumVal>
+            <EnumVal ord="1">bay-control</EnumVal>
+            <EnumVal ord="2">station-control</EnumVal>
+            <EnumVal ord="3">remote-control</EnumVal>
+            <EnumVal ord="4">automatic-bay</EnumVal>
+            <EnumVal ord="5">automatic-station</EnumVal>
+            <EnumVal ord="6">automatic-remote</EnumVal>
+            <EnumVal ord="7">maintenance</EnumVal>
+            <EnumVal ord="8">process</EnumVal>
+        </EnumType>
+        <EnumType id="angidCMV">
+            <EnumVal ord="0">V</EnumVal>
+            <EnumVal ord="1">A</EnumVal>
+            <EnumVal ord="2">other</EnumVal>
+        </EnumType>
+        <EnumType id="angid">
+            <EnumVal ord="0">Va</EnumVal>
+            <EnumVal ord="1">Vb</EnumVal>
+            <EnumVal ord="2">Vc</EnumVal>
+            <EnumVal ord="3">Aa</EnumVal>
+            <EnumVal ord="4">Ab</EnumVal>
+            <EnumVal ord="5">Ac</EnumVal>
+            <EnumVal ord="6">Vab</EnumVal>
+            <EnumVal ord="7">Vbc</EnumVal>
+            <EnumVal ord="8">Vca</EnumVal>
+            <EnumVal ord="9">Aother</EnumVal>
+            <EnumVal ord="10">Vother</EnumVal>
+        </EnumType>
+        <EnumType id="multiplier">
+            <EnumVal ord="-24">y</EnumVal>
+            <EnumVal ord="-21">z</EnumVal>
+            <EnumVal ord="-18">a</EnumVal>
+            <EnumVal ord="-15">f</EnumVal>
+            <EnumVal ord="-12">p</EnumVal>
+            <EnumVal ord="-9">n</EnumVal>
+            <EnumVal ord="-6">µ</EnumVal>
+            <EnumVal ord="-3">m</EnumVal>
+            <EnumVal ord="-2">c</EnumVal>
+            <EnumVal ord="-1">d</EnumVal>
+            <EnumVal ord="0"/>
+            <EnumVal ord="1">da</EnumVal>
+            <EnumVal ord="2">h</EnumVal>
+            <EnumVal ord="3">k</EnumVal>
+            <EnumVal ord="6">M</EnumVal>
+            <EnumVal ord="9">G</EnumVal>
+            <EnumVal ord="12">T</EnumVal>
+            <EnumVal ord="15">P</EnumVal>
+            <EnumVal ord="18">E</EnumVal>
+            <EnumVal ord="21">Z</EnumVal>
+            <EnumVal ord="24">Y</EnumVal>
+        </EnumType>
+        <EnumType id="SIUnit">
+            <EnumVal ord="1"/>
+            <EnumVal ord="2">m</EnumVal>
+            <EnumVal ord="3">kg</EnumVal>
+            <EnumVal ord="4">s</EnumVal>
+            <EnumVal ord="5">A</EnumVal>
+            <EnumVal ord="6">K</EnumVal>
+            <EnumVal ord="7">mol</EnumVal>
+            <EnumVal ord="8">cd</EnumVal>
+            <EnumVal ord="9">deg</EnumVal>
+            <EnumVal ord="10">rad</EnumVal>
+            <EnumVal ord="11">sr</EnumVal>
+            <EnumVal ord="21">Gy</EnumVal>
+            <EnumVal ord="22">q</EnumVal>
+            <EnumVal ord="23">°C</EnumVal>
+            <EnumVal ord="24">Sv</EnumVal>
+            <EnumVal ord="25">F</EnumVal>
+            <EnumVal ord="26">C</EnumVal>
+            <EnumVal ord="27">S</EnumVal>
+            <EnumVal ord="28">H</EnumVal>
+            <EnumVal ord="29">V</EnumVal>
+            <EnumVal ord="30">ohm</EnumVal>
+            <EnumVal ord="31">J</EnumVal>
+            <EnumVal ord="32">N</EnumVal>
+            <EnumVal ord="33">Hz</EnumVal>
+            <EnumVal ord="34">lx</EnumVal>
+            <EnumVal ord="35">Lm</EnumVal>
+            <EnumVal ord="36">Wb</EnumVal>
+            <EnumVal ord="37">T</EnumVal>
+            <EnumVal ord="38">W</EnumVal>
+            <EnumVal ord="39">Pa</EnumVal>
+            <EnumVal ord="41">m²</EnumVal>
+            <EnumVal ord="42">m³</EnumVal>
+            <EnumVal ord="43">m/s</EnumVal>
+            <EnumVal ord="44">m/s²</EnumVal>
+            <EnumVal ord="45">m³/s</EnumVal>
+            <EnumVal ord="46">m/m³</EnumVal>
+            <EnumVal ord="47">M</EnumVal>
+            <EnumVal ord="48">kg/m³</EnumVal>
+            <EnumVal ord="49">m²/s</EnumVal>
+            <EnumVal ord="50">W/m K</EnumVal>
+            <EnumVal ord="51">J/K</EnumVal>
+            <EnumVal ord="52">ppm</EnumVal>
+            <EnumVal ord="53">1/s</EnumVal>
+            <EnumVal ord="54">rad/s</EnumVal>
+            <EnumVal ord="61">VA</EnumVal>
+            <EnumVal ord="62">Watts</EnumVal>
+            <EnumVal ord="63">VAr</EnumVal>
+            <EnumVal ord="64">phi</EnumVal>
+            <EnumVal ord="65">cos(phi)</EnumVal>
+            <EnumVal ord="66">Vs</EnumVal>
+            <EnumVal ord="67">V²</EnumVal>
+            <EnumVal ord="68">As</EnumVal>
+            <EnumVal ord="69">A²</EnumVal>
+            <EnumVal ord="70">A²t</EnumVal>
+            <EnumVal ord="71">VAh</EnumVal>
+            <EnumVal ord="72">Wh</EnumVal>
+            <EnumVal ord="73">VArh</EnumVal>
+            <EnumVal ord="74">V/Hz</EnumVal>
+        </EnumType>
+        <EnumType id="Dbpos">
+            <EnumVal ord="0">intermediate</EnumVal>
+            <EnumVal ord="1">off</EnumVal>
+            <EnumVal ord="2">on</EnumVal>
+            <EnumVal ord="3">bad</EnumVal>
+        </EnumType>
+        <EnumType id="Tcmd">
+            <EnumVal ord="0">stop</EnumVal>
+            <EnumVal ord="1">lower</EnumVal>
+            <EnumVal ord="2">higher</EnumVal>
+            <EnumVal ord="3">reserved</EnumVal>
+        </EnumType>
+        <EnumType id="Beh">
+            <EnumVal ord="1">on</EnumVal>
+            <EnumVal ord="2">blocked</EnumVal>
+            <EnumVal ord="3">test</EnumVal>
+            <EnumVal ord="4">test/blocked</EnumVal>
+            <EnumVal ord="5">off</EnumVal>
+        </EnumType>
+        <EnumType id="Mod">
+            <EnumVal ord="1">on</EnumVal>
+            <EnumVal ord="2">blocked</EnumVal>
+            <EnumVal ord="3">test</EnumVal>
+            <EnumVal ord="4">test/blocked</EnumVal>
+            <EnumVal ord="5">off</EnumVal>
+        </EnumType>
+        <EnumType id="Health">
+            <EnumVal ord="1">Ok</EnumVal>
+            <EnumVal ord="2">Warning</EnumVal>
+            <EnumVal ord="3">Alarm</EnumVal>
+        </EnumType>
+        <EnumType id="CBOpCap">
+            <EnumVal ord="1">None</EnumVal>
+            <EnumVal ord="2">Open</EnumVal>
+            <EnumVal ord="3">Close-Open</EnumVal>
+            <EnumVal ord="4">Open-Close-Open</EnumVal>
+            <EnumVal ord="5">Close-Open-Close-Open</EnumVal>
+        </EnumType>
+        <EnumType id="SwOpCap">
+            <EnumVal ord="1">None</EnumVal>
+            <EnumVal ord="2">Open</EnumVal>
+            <EnumVal ord="3">Close</EnumVal>
+            <EnumVal ord="4">Open and Close</EnumVal>
+        </EnumType>
+        <EnumType id="SwTyp">
+            <EnumVal ord="1">Load Break</EnumVal>
+            <EnumVal ord="2">Disconnector</EnumVal>
+            <EnumVal ord="3">Earthing Switch</EnumVal>
+            <EnumVal ord="4">High Speed Earthing Switch</EnumVal>
+        </EnumType>
+        <EnumType id="FH_Mod">
+            <EnumVal ord="1">on</EnumVal>
+            <EnumVal ord="2">blocked</EnumVal>
+            <EnumVal ord="3">test</EnumVal>
+            <EnumVal ord="4">test/blocked</EnumVal>
+            <EnumVal ord="5">off</EnumVal>
+        </EnumType>
+        <EnumType id="FH_ctlModel">
+            <EnumVal ord="0">status-only</EnumVal>
+            <EnumVal ord="1">direct-with-normal-security</EnumVal>
+            <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+            <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+            <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+        </EnumType>
+        <EnumType id="FH_sboClass">
+            <EnumVal ord="0">operate-once</EnumVal>
+            <EnumVal ord="1">operate-many</EnumVal>
+        </EnumType>
+        <EnumType id="FH_orCategory">
+            <EnumVal ord="0">not-supported</EnumVal>
+            <EnumVal ord="1">bay-control</EnumVal>
+            <EnumVal ord="2">station-control</EnumVal>
+            <EnumVal ord="3">remote-control</EnumVal>
+            <EnumVal ord="4">automatic-bay</EnumVal>
+            <EnumVal ord="5">automatic-station</EnumVal>
+            <EnumVal ord="6">automatic-remote</EnumVal>
+            <EnumVal ord="7">maintenance</EnumVal>
+            <EnumVal ord="8">process</EnumVal>
+        </EnumType>
+        <EnumType id="FH_Beh">
+            <EnumVal ord="1">on</EnumVal>
+            <EnumVal ord="2">blocked</EnumVal>
+            <EnumVal ord="3">test</EnumVal>
+            <EnumVal ord="4">test/blocked</EnumVal>
+            <EnumVal ord="5">off</EnumVal>
+        </EnumType>
+        <EnumType id="FH_Health">
+            <EnumVal ord="1">Ok</EnumVal>
+            <EnumVal ord="2">Warning</EnumVal>
+            <EnumVal ord="3">Alarm</EnumVal>
+        </EnumType>
+    </DataTypeTemplates>
+</SCL>
